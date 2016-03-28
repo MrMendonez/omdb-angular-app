@@ -1,0 +1,8 @@
+<div ng-hide="movie.Poster === 'N/A'">
+  <h1 ng-click="getActors()">{{ movie.Title }}</h1>
+  <img src="{{movie.Poster}}">
+  <ul>
+    <li ng-repeat="actor in actors">{{ actor }}</li>
+  </ul>
+  <hr>
+</div>

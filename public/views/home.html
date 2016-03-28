@@ -1,0 +1,6 @@
+<div class="row" ng-controller="MovieController">
+  <div class="input-field col s7">
+    <input type="text" ng-model="movieName" ng-change="getMovies()" placeholder="Enter Movie Name">
+    <movie-item ng-repeat="movie in movies" movie="movie"></movie-item>
+  </div>
+</div>
