@@ -1,9 +1,10 @@
-<div ng-hide="movie.Poster === 'N/A'">
+<div>
   <!-- <p ng-click="getActors()">{{ movie.Title }}</p> -->
   <div class="col m2">
     <div class="card">
       <div class="card-image">
-        <img src="{{movie.Poster}}" ng-click="getActors()">
+        <img src="{{movie.Poster}}" ng-click="getActors()" ng-if="movie.Poster !== 'N/A'">
+        <img src="img/no-movie-poster.jpg" ng-click="getActors()" ng-if="movie.Poster === 'N/A'" />
       </div>
       <div class="card-content">
         <span class="card-title">{{ movie.Title }}</span>

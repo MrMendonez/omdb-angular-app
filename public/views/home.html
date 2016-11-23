@@ -1,14 +1,25 @@
-<div ng-controller="MovieController">
+<div>
+  <br />
+  <br />
   <div class="input-field col m6">
     <input id="movie_name" type="text" ng-model="movieName" ng-change="getMovies()" >
     <label for="movie_name">Movie Name</label>
   </div>
   <div class="col m12">
     <div class="row">
-      <movie-item ng-repeat="movie in movies" movie="movie"></movie-item>
+      <movie-item ng-repeat="movie in moviesRow1" movie="movie"></movie-item>
     </div>
     <div class="row">
       <movie-item ng-repeat="movie in moviesRow2" movie="movie"></movie-item>
+    </div>
+    <div class="row">
+      <movie-item ng-repeat="movie in moviesRow3" movie="movie"></movie-item>
+    </div>
+    <div class="row">
+      <movie-item ng-repeat="movie in moviesRow4" movie="movie"></movie-item>
+    </div>
+    <div class="row">
+      <movie-item ng-repeat="movie in moviesRow5" movie="movie"></movie-item>
     </div>
   </div>
 </div>

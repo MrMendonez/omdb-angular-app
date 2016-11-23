@@ -1,5 +1,4 @@
-angular.module('movieApp')
-.directive('movieItem', function() {
+movieApp.directive('movieItem', function() {
   return {
     restrict: 'E',
     scope: {
@@ -11,8 +10,8 @@ angular.module('movieApp')
         $http.get('http://www.omdbapi.com/?i=' + $scope.movie.imdbID + '&plot=short&r=json')
         .then(function(response) {
           $scope.actors = response.data.Actors.split(',');
-        })
-      }
+        });
+      };
     }
-  }
+  };
 });
