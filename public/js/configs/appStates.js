@@ -8,8 +8,8 @@ movieApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) 
     controller: 'SearchController'
   })
 
-  .state('movie.detail', {
-    url: '/movie/:movie-title',
+  .state('movie.details', {
+    url: '/movie-details',
     templateUrl: 'views/movie-details.html',
     controller: 'MovieDetailsController'
   });

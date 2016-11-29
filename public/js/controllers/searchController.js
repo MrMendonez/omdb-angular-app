@@ -2,8 +2,6 @@ movieApp.controller('SearchController', function($scope, $http) {
   $scope.getMovies = function() {
     $http.get('http://www.omdbapi.com/?s=' + $scope.movieName + '&y=&plot=short&r=json')
     .then(function(response) {
-      // $scope.moviesList = response.data.Search;
-      // console.log('moviesList = ', $scope.moviesList);
       $scope.moviesRow1 = response.data.Search.slice(0, 0 + 6); // first 6 moviesRow1 from page 1 of json
       console.log('moviesRow1 = ', $scope.moviesRow1);
       $scope.moviesRow2 = response.data.Search.slice(6, 6 + 9); // last 3 movies from page 2 of json
@@ -25,7 +23,7 @@ movieApp.controller('SearchController', function($scope, $http) {
       console.log('moviesPage3 = ', $scope.moviesPage3);
       $scope.moviesRow4 = $scope.moviesRow4.concat($scope.moviesPage3);
       console.log('moviesRow4 = ', $scope.moviesRow4);
-      $scope.moviesRow5 = response.data.Search.slice(4, 4 + 9)
+      $scope.moviesRow5 = response.data.Search.slice(4, 4 + 9);
     });
   };
 });
